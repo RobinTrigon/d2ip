@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+echo -e "\033[0;35m
+                        ____    ____    ___   ____  
+                       |  _ \  |___ \  |_ _| |  _ \ 
+                       | | | |   __) |  | |  | |_) |
+                       | |_| |  / __/   | |  |  __/ 
+                       |____/  |_____| |___| |_|    
+                                                     "
+echo -e "                                              \033[0;37m Creator: 3rr0r-404"
+
+echo -e "\033[0;34muses: bash d2ip.sh target-list.txt"
+
+
+
+for host in $(cat $1)
+do 
+        host $host | tamu ip | tee ip.txt
+done
+
+#  $1 means subdomain list
